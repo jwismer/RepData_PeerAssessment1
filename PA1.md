@@ -1,6 +1,11 @@
-# Reproducible Research: Peer Assessment 1
-Jim Wismer  
-For project submission 11/16/2014  
+---
+title:  "Reproducible Research: Peer Assessment 1"
+author: "Jim Wismer"
+date:   "For project submission 11/16/2014"
+output: 
+  html_document:
+    keep_md: true
+---
 
 ## Read the activiy data from the csv file, unzip the file.
 
@@ -8,6 +13,13 @@ For project submission 11/16/2014
 ```r
 # Load library
 library(ggplot2)
+```
+
+```
+## Need help? Try the ggplot2 mailing list: http://groups.google.com/group/ggplot2.
+```
+
+```r
 library(plyr)
 
 #get the file
@@ -40,12 +52,12 @@ hist(totalStepsPerDay$steps, main="Frequency of Total Steps per Day Occurences",
                              xlab="Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-2](./PA1_files/figure-html/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 The mean total steps taken per day is:
 
 ```
-## [1] 10766
+## [1] 10766.19
 ```
 
 The median total steps taken per day is:
@@ -71,7 +83,7 @@ plot(avgStepsPerInt$steps ~ totalStepsPerInt$interval, type="l",
       ylab="Avg Steps")
 ```
 
-![plot of chunk unnamed-chunk-6](./PA1_files/figure-html/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 ### Time Interval of Maximum Avg
 
@@ -113,13 +125,13 @@ hist(totalStepsPerDayComplete$steps, main="Frequency of Total Steps per Day Occu
                              xlab="Total Steps per Day")
 ```
 
-![plot of chunk unnamed-chunk-10](./PA1_files/figure-html/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 Report the Mean and Median values.
 
 The mean total steps taken per day is:
 
 ```
-## [1] 10599
+## [1] 10598.82
 ```
 
 The median total steps taken per day is:
@@ -174,5 +186,5 @@ g <- g + geom_line() + facet_grid(weekday ~ .) + labs(x = "interval", y = "Numbe
 print(g)
 ```
 
-![plot of chunk unnamed-chunk-16](./PA1_files/figure-html/unnamed-chunk-16.png) 
+![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png) 
 
